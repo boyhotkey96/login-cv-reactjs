@@ -1,0 +1,199 @@
+* {
+	padding: 0;
+	margin: 0 auto;
+}
+
+body {
+	margin: 0 auto;
+	background-color: #525659 ;
+}
+
+.clear {
+	clear: both;
+}
+
+.wrapper {
+	width: 800px;
+	margin-top: 50px;
+	font-size: 14px;
+}
+
+/* Start left */
+#left {
+	float: left;
+	width: 35%;
+	background-color: #3180bc;
+	padding-bottom: 60px;
+}
+
+/* Start Avatar */
+.left-top {
+	background-color: #286a9a;
+	height: 265px;
+}
+
+.avatar2 {
+	padding-top: 20px;
+	text-align: center;
+}
+
+.avatar2 img {
+	width: 170px;
+	height: 170px;
+	border-radius: 50%;
+}
+
+.intro {
+	margin-top: 17px;
+	text-align: center;
+}
+
+.intro p {
+	color: white;
+	font-size: 24px;
+	font-weight: bold;
+}
+
+.intro span {
+	color: white;
+	font-size: 14px;
+}
+/* End Avatar */
+
+/* Start gioithieu */
+.left-bot {
+	background-color: #3180bc;
+	color: white;
+}
+
+.left-bot-content {
+	padding-top: 28px;
+	padding-left: 12px;
+}
+
+.title {
+	padding-top: 12px;
+}
+
+.title i {
+	padding-left: 5px;
+	width: 12px;
+	text-align: center;
+}
+
+.title span {
+	padding-left: 5px;
+}
+/* End gioithieu */
+
+/* OBJECTIVE */
+.left-bot-objective {
+	padding-top: 33px;
+	color: white;
+	padding-left: 12px;
+}
+
+.left-bot-objective p {
+	font-size: 20px;
+	font-weight: bold;	
+	margin-bottom: 12px;
+}
+
+.left-bot-objective span {
+	margin-top: 12px;
+}
+
+/* SKILLS */
+.skill {
+	padding-top: 33px;
+	padding-left: 12px;
+}
+
+.skill-title {
+	font-size: 20px;
+	font-weight: bold;	
+	margin-bottom: 12px;
+}
+
+.skills {
+	margin-top: 12px;
+}
+
+.skills p a {
+	color: red;
+	font-size: 16px;
+}
+
+.skills progress {
+	width: 90%;
+}
+/* End left */
+
+/* Start Right */
+#right {
+	float: right;
+	width: 65%;
+	background-color: #ffffff;
+	padding-bottom: 60px;
+}
+
+.cc-left, .ex-left {
+	float: left;
+	width: 70%;
+}
+
+.cc-left-p, .ex-left-p {
+	padding-top: 12px;
+	font-weight: bold;
+	padding-left: 12px;
+	color: #4c5647;
+}
+
+.cc-left span, .ex-left span {
+	color: #67607e;
+	font-size: 16px;
+	padding-left: 12px;
+}
+
+.cc-right, .ex-right {
+	float: right;
+	width: 30%;
+	font-weight: bold;
+	text-align: right;
+	padding-top: 12px;
+}
+
+.cc-right p, .ex-right p {
+	padding-right: 10px;
+}
+
+.subtitle {
+	color: #67607e;
+	font-size: 14px;	
+	padding-top: 10px;
+	padding-left: 12px;
+}
+
+#right .right-education {
+	
+}
+
+#right .fa {
+	padding-top: 20px;
+	padding-left: 12px;
+	font-size: 32px;
+	color: #286a9a;
+}
+
+.title-skill {
+	font-size: 18px;
+	font-weight: bold;
+	padding-left: 5px;
+}
+
+.cc-right .topcv {
+	padding-right: 30px;
+	padding-top: 80px;
+	font-weight: normal;
+}
+/* End Right */

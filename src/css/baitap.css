@@ -1,0 +1,82 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 1100px;
+    margin-top: 30px;
+    margin: 0 auto;
+    background-color: white;
+}
+
+h1 {
+    border-bottom: 3px double black;
+    text-align: center;
+    font-size: 3rem;
+    padding: 10px 0;
+    margin: 20px 0;
+}
+
+.baitap {
+    margin-bottom: 40px;
+}
+
+.bt p {
+    text-indent: 20px;
+    text-align: justify;
+}
+
+table {
+    border-collapse: collapse;
+    width: 800px;
+    float: left;
+    margin-bottom: 30px;
+}
+
+table th, table td {
+    padding: 8px;
+    border: 1px solid black;
+}
+
+.clear {
+    clear: both;
+}
+
+.baitap form {
+    margin: 10px 0 50px 0;
+}
+
+.form1 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.form1 textarea {
+    margin: 0;
+    padding: 7px;
+    width: 42%;
+    font-size: 20px;
+    height: 100px;
+}
+
+.form1 button {
+    outline: none;
+    color: red;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 15px 25px;
+    background-color: #ccc;
+    border-radius: 10px;
+}
+
+.form1 button:hover {
+    cursor: pointer;
+    background-color: #333;
+}
+
+a {
+    cursor: pointer;
+}

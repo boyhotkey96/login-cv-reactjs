@@ -1,0 +1,221 @@
+* {
+    padding: 0;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 auto;
+    background: linear-gradient(to right, #64696f, #1050ad);   
+    background: -webkit-linear-gradient(to right, #64696f, #1050ad);   
+    background: -moz-linear-gradient(to right, #64696f, #1050ad);   
+    background: -o-linear-gradient(to right, #64696f, #1050ad);   
+    height: 100vh; 
+}
+
+#wrapper {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+label {
+    color: red;
+    font-size: 20px;
+}
+
+.content {
+    border: 1px solid #f2f2f2;
+    border-radius: 20px;
+    width: 100px;
+    height: 350px;
+}
+
+.avatar {
+    position: absolute;
+    top: -20%;
+    left: 35%;        
+}
+
+.avatar img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+form {
+    margin: 0 auto;
+    margin-top: 130px;
+    width: 80%;
+}
+
+.username {
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    height: 40px;
+    border: 1px solid #ccc;
+    margin: 15px 0;
+}
+
+.username i {
+    margin: 0 5px;
+}
+
+.username input {
+    width: 100%;
+    height: 35px;
+    border: none;
+    outline: 0;
+    background-color: #ffffff;
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.login {
+  width: 80%;
+  padding: 0 15px;
+  background: linear-gradient(to right, #394046, #055ba3);
+  height: 40px;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.save {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10px;
+    font-size: 13px;
+}
+
+.save label {
+    color: black;
+    font-size: 13px;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin: 10px 0;
+}
+
+
+
+@media only screen and (min-width: 200px) {
+    .content {
+        width: 250px;
+    }
+    
+    .avatar {
+        left: 20%;
+    }
+
+    form, .login {
+        width: 200px;
+    }
+
+    .footer {
+        font-size: 10px;
+    }
+}
+
+@media only screen and (min-width: 480px) {
+    .content {
+        width: 300px;
+    }
+    
+    .avatar {
+        left: 25%;
+    }
+
+    form, .login {
+        width: 250px;
+    }
+
+    .footer {
+        font-size: 13px;
+    }
+}
+
+@media only screen and (min-width: 576px) {
+    .content {
+        width: 400px;
+    }
+    
+    .avatar {
+        left: 30%;    
+    }
+
+    form, .login {
+        width: 300px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .content {
+        padding: 0 30px; 
+        width: 100%;
+    }
+    
+    form {
+        width: 350px;
+    }
+    
+    .avatar {
+        left: 35%;    
+    }
+
+    .login {
+        width: 350px;
+    }
+
+    .save, .save label {
+        font-size: 16px;
+    }
+} 
+
+@media only screen and (min-width: 992px) {
+    .content {
+        padding: 0 50px;
+        width: 100%;
+    }
+    
+    .avatar {
+        left: 35%;  
+    }
+
+    form, .login {
+        width: 450px;
+    }
+
+    .save, .save label {
+        font-size: 18px;
+    }
+} 
+
+@media only screen and (min-width: 1200px) {
+    .content {
+        padding: 0 50px;
+        width: 100%;
+    }
+
+    .avatar {
+        left: 40%;
+    }
+    
+    form, .login {
+        width: 600px;
+    }
+
+    .save, .save label {
+        font-size: 20px;
+    }
+}  
