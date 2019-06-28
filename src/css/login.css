@@ -13,7 +13,7 @@ body {
     height: 100vh; 
 }
 
-#wrapper {
+#content {
     position: absolute;
     left: 50%;
     top: 50%;

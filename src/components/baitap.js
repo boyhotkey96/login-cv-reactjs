@@ -1,8 +1,68 @@
 import React from 'react';
 import '../css/baitap.css';
 import Item from './item';
+import Header from './header.js';
 
 class Baitap extends React.Component {
+    constructor(props) {
+        super(props);
+        this.bai8 = this.bai8.bind(this);
+        this.bai9 = this.bai9.bind(this);
+        this.bai10 = this.bai10.bind(this);
+    }
+    bai8(input) {
+        if (input.length <= 0) {
+            alert("Enter input (number)");
+            return "";
+        } else if (input > 0) {
+            return "Chua lam...!!"
+        } else {
+            return "Input không hợp lệ (Input là number)";
+        }
+    }
+    bai9(input) {
+        var count = 0;
+        if (input.length <= 0) {
+            alert("Enter input (number)");
+            return "";
+        } else if (input > 0) {
+            for (var i = 1; i <= input; i++) {
+                if (input % i === 0) {
+                    count++;
+                }
+            }
+            if (count === 3) {
+                console.log("YES");
+                return "YES";
+            } else {
+                // console.log("NO" + " - Count = " + count);
+                return "NO";
+            }
+        } else {
+            return "Input không hợp lệ (Input là number)";
+        }
+    }
+    bai10(input) {
+        //console.log(input);
+        if (input.length <= 0) {
+            alert("Enter input (number)");
+            return "";
+        } else if (Number(input) > 0) {
+            var st = 0;
+            var xx = Number(input);
+            console.log(xx);
+            for (var i = 1; i <= xx; i++) {
+                st += st + i;
+                if (st >= xx) {
+                    console.log(i);
+                    return i;
+                    // break;
+                }
+            }
+        } else {
+            return "Input không hợp lệ (Input là number)"
+        }
+    }
     render() {
         var baitap = [{
                 title: "8. M O O",
@@ -17,12 +77,10 @@ class Baitap extends React.Component {
                  muốn biết kí tự thứ N của dãy này là chữ “m” hay chữ “o”. Bạn hãy giúp Bessie nhé!
                  {"\n"}Input{"\n"}*Dòng 1: Gồm một số nguyên N(1 &lt;= N &lt;= 10^9).{"\n"}Output{"\n"}*Dòng 1: 
                  Dòng duy nhất chứa kí tự “m” hoặc “o”.{"\n"}</pre>,
-                input: "input8",
-                click: "this.bai8",
-                output: "output8",
-                td1: 1,
-                td2: 1,
-                td3: ""
+                td1: 11,
+                td2: "m",
+                td3: "",
+                click: this.bai8
             },
             {
                 title: "9. Số gần nguyên tố",
@@ -34,12 +92,11 @@ class Baitap extends React.Component {
                 mảng.{"\n"}Dòng tiếp theo nhập n số nguyên dương x[i] (1 &lt;= x[i] &lt;= 10^12){"\n"}Output{"\n"}
                 In ra trên n dòng: dòng thứ i in “YES” nếu x[i] là số gần nguyên tố, ngược lại thì in “NO”.{"\n"}
                 VD:</pre>,
-                input: "input9",
-                click: "this.bai9",
-                output: "output9",
                 td1: 3,
-                td2: "YES",
-                td3: "4 5 6"
+                td2: "",
+                td3: "4 5 6",
+                td4: "YES NO NO",
+                click: this.bai9
             },
             {
                 title: "10. Tính sát thương",
@@ -50,27 +107,26 @@ class Baitap extends React.Component {
                 Bạn hãy giúp Thanh tính xem có thể chịu được tối đa bao nhiêu cú đánh{"\n"}của Ursa.{"\n"}
                 Input{"\n"}Dòng duy nhất chứa số X (1 &lt;= X &lt;= 10000).{"\n"}Output{"\n"}In ra số cú đánh 
                 tối đa mà hero của Sơn có thể chịu được.{"\n"}VD: {"\n"}VD:</pre>,
-                input: "input10",
-                click: "this.bai10",
-                output: "output10",
-                td1: 11,
-                td2: "m",
-                td3: ""
+                td1: 1,
+                td2: 1,
+                td3: "",
+                td4: "",
+                click: this.bai10
             }
         ];
         let elements = baitap.map((baitap, index) => {
             return <Item  key={index} 
                             title={baitap.title} 
                             subtitle={baitap.subtitle}
-                            input={baitap.input} 
-                            click={baitap.click} 
-                            output={baitap.output}
                             td1={baitap.td1}
                             td2={baitap.td2}
-                            td3={baitap.td3} />
+                            td3={baitap.td3}
+                            td4={baitap.td4}
+                            click={baitap.click} />
         });
         return (
             <div>
+                <Header />
                 <h1>Phùng Bá Dự</h1>
                 {elements}
             </div>

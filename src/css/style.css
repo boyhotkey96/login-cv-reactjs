@@ -12,6 +12,27 @@ body {
 	clear: both;
 }
 
+#header-cv {
+	background-color: #ccc;
+	padding: 10px;
+	text-align: right;
+}
+
+.btn-logout {
+	color: #f15025;
+	border: 3px solid #f15025;
+	border-radius: 10px;
+	background: rgba(0,0,0,0.6);
+	font-size: 1.6rem;
+	padding: 0.25rem 0.5rem;
+	cursor: pointer;
+	outline: none;
+}
+
+.btn-logout:hover {
+	background: rgb(0,0,0);
+}
+
 .wrapper {
 	width: 800px;
 	margin-top: 50px;
