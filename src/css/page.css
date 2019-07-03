@@ -1,0 +1,120 @@
+* {
+    padding: 0;
+    margin: 0 auto;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+nav {
+    width: 100%;
+    background-color: #fff;
+    border-top: 1px solid #bec6cd;
+    border-bottom: 1px solid #bec6cd;
+    padding: 10px;
+}
+
+ul {
+    width: 80%;
+    margin: 0 auto;
+    padding: 0;
+    text-align: right;
+}
+
+ul li {
+    margin: 0 5px;
+    padding: 0 20px;
+    list-style: none;
+    display: inline-block;
+    height: 50px;
+    line-height: 50px;
+    border: 1px solid transparent;
+}
+
+ul li:hover {
+    border: 1px solid #05b0ff;
+    border-radius: 5px;
+}
+
+ul li:hover a {
+    color: #05b0ff;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #37424d;
+    font-weight: bold;
+}
+
+ul li a:hover {}
+
+.toggle {
+    width: 100%;
+    padding: 10px 20px;
+    background: #001f44;
+    box-sizing: border-box;
+    color: #fff;
+    font-size: 30px;
+    display: none;
+    text-align: right;
+}
+
+.toggle .toggle-title {
+    width: 80%;
+    float: left;
+    text-align: left;
+    display: inline;
+}
+
+.toggle .toggle-title h1 {
+    display: inline;
+    font-size: 28px;
+    border: none;
+    color: red;
+}
+
+.ul-guest {
+    display: inline;
+    float: left;
+    border: none;
+}
+
+.ul-guest h1 {
+    display: inline;
+    color: red;
+    border: none;
+}
+
+.isActive {
+    background: red;
+    padding: 15px 20px;
+}
+
+@media (max-width: 768px) {
+    .toggle {
+        display: block;
+        cursor: pointer;
+    }
+
+    ul {
+        width: 100%;
+        display: none;
+    }
+
+    ul li {
+        display: block;
+        text-align: center;
+        border-bottom: 1px solid green;
+    }
+
+    ul li:hover {
+        background: purple;
+    }
+
+    .active {
+        display: block;
+    }
+
+    .ul-guest {
+        display: none;
+    }
+}

@@ -3,7 +3,6 @@
     margin: 0 auto;
     box-sizing: border-box;
 }
-
 body {
     margin: 0 auto;
     background: linear-gradient(to right, #64696f, #1050ad);   
@@ -29,7 +28,7 @@ label {
     border: 1px solid #f2f2f2;
     border-radius: 20px;
     width: 100px;
-    height: 350px;
+    height: 400px;
 }
 
 .avatar {
@@ -219,3 +218,16 @@ form {
         font-size: 20px;
     }
 }  
+
+
+/* Pages */
+
+.pages {
+    width: 100%;
+    background-color: #fff;
+    height: 100px;
+}
+
+
+
+

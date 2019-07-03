@@ -2,7 +2,9 @@ import React from 'react';
 import '../css/login.css';
 import avatar from '../images/avt.JPG';
 import Cv from './cv.js';
+import Pages from './pages.js';
 import axios from 'axios';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 class Login extends React.Component {
     constructor() {
@@ -11,6 +13,7 @@ class Login extends React.Component {
             isActive: false
         };
         this.login = this.login.bind(this);
+        this.loginGuest = this.loginGuest.bind(this);
     }
 
     login() {
@@ -40,6 +43,10 @@ class Login extends React.Component {
         }
     }
 
+    loginGuest() {
+        window.location.href = "/pages";
+    }
+
     render() {
         console.log(this.state);
         if (this.state.isActive) {
@@ -47,33 +54,34 @@ class Login extends React.Component {
         }
         return (
             <div id="content">
-                {/* Avatar */}
-                <div className="avatar">
-                  <img src={avatar} alt=""/>
-                </div>
-                <div className="content">
-                  <form action="true">
-                    <div className="username">
-                      <i className="fa fa-user" />
-                      <input id="mail" type="text" placeholder="Username" required defaultValue="vexere" ref="username" />
+                    {/* Avatar */}
+                    <div className="avatar">
+                      <img src={avatar} alt=""/>
                     </div>
-                    <div className="username">
-                      <i className="fa fa-clipboard" />
-                      <input id="pass" type="password" placeholder="**********" required defaultValue="vxr2019" ref="password" />
+                    <div className="content">
+                      <form action="true">
+                        <div className="username">
+                          <i className="fa fa-user" />
+                          <input id="mail" type="text" placeholder="Username" required defaultValue="vexere" ref="username" />
+                        </div>
+                        <div className="username">
+                          <i className="fa fa-clipboard" />
+                          <input id="pass" type="password" placeholder="**********" required defaultValue="vxr2019" ref="password" />
+                        </div>
+                        <input className="login" type="button" defaultValue="LOGIN" onClick={this.login} />
+                        <input className="login" type="button" defaultValue="LOGIN AS GUEST" onClick={this.loginGuest} />
+                        <div className="save">
+                          <label>
+                            <input className="checked" type="checkbox" defaultChecked="checked" name="remember" /> Remember me
+                          </label>
+                          <p><i>Forgot Password?</i></p>
+                        </div>
+                      </form>
                     </div>
-                    <input className="login" type="button" defaultValue="LOGIN" onClick={this.login} />
-                    <div className="save">
-                      <label>
-                        <input className="checked" type="checkbox" defaultChecked="checked" name="remember" /> Remember me
-                      </label>
-                      <p><i>Forgot Password?</i></p>
+                    <div className="footer">
+                        Copyright Ⓒ  2018 Your Brand Name, Inc
                     </div>
-                  </form>
                 </div>
-                <div className="footer">
-                    Copyright Ⓒ  2018 Your Brand Name, Inc
-                </div>
-            </div>
         );
     }
 }

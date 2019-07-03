@@ -17,9 +17,20 @@ class Header extends React.Component {
         if (!this.state.isActive) {
             return <Login />
         }
+        
+        console.log(this.props.isShow);
+        let elm = null;
+        if (this.props.isShow) {
+            elm = "";
+        } else {
+            elm =   <div id="header-cv">
+                        <button className="btn-logout" type="button" onClick={this.logOut.bind(this)}>Logout</button>
+                    </div>;
+        }
+        // console.log(this.props.isShow);
         return (
-            <div id="header-cv">
-                <button className="btn-logout" type="button" onClick={this.logOut.bind(this)}>Logout</button>
+            <div>  
+                {elm}
             </div>
         );
     }

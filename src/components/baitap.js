@@ -10,6 +10,7 @@ class Baitap extends React.Component {
         this.bai9 = this.bai9.bind(this);
         this.bai10 = this.bai10.bind(this);
     }
+
     bai8(input) {
         if (input.length <= 0) {
             alert("Enter input (number)");
@@ -20,6 +21,7 @@ class Baitap extends React.Component {
             return "Input không hợp lệ (Input là number)";
         }
     }
+
     bai9(input) {
         var count = 0;
         if (input.length <= 0) {
@@ -42,6 +44,7 @@ class Baitap extends React.Component {
             return "Input không hợp lệ (Input là number)";
         }
     }
+    
     bai10(input) {
         //console.log(input);
         if (input.length <= 0) {
@@ -114,19 +117,42 @@ class Baitap extends React.Component {
                 click: this.bai10
             }
         ];
-        let elements = baitap.map((baitap, index) => {
-            return <Item  key={index} 
-                            title={baitap.title} 
-                            subtitle={baitap.subtitle}
-                            td1={baitap.td1}
-                            td2={baitap.td2}
-                            td3={baitap.td3}
-                            td4={baitap.td4}
-                            click={baitap.click} />
+
+        console.log(this.props.isShow);
+        let elements = null;
+        elements = baitap.map((baitap, index) => {
+            if (this.props.isShow) {
+                if (index % 2 === 0) {
+                    return <Item  key={index} 
+                                title={baitap.title} 
+                                subtitle={baitap.subtitle}
+                                td1={baitap.td1}
+                                td2={baitap.td2}
+                                td3={baitap.td3}
+                                td4={baitap.td4}
+                                click={baitap.click} />
+                }
+            } else {
+                return <Item  key={index} 
+                                title={baitap.title} 
+                                subtitle={baitap.subtitle}
+                                td1={baitap.td1}
+                                td2={baitap.td2}
+                                td3={baitap.td3}
+                                td4={baitap.td4}
+                                click={baitap.click} />
+            }
         });
+
+        let elm = null;
+        if (this.props.isShow) {
+            elm = "";
+        } else {
+            elm = <Header />
+        }
         return (
             <div>
-                <Header />
+                {elm}
                 <h1>Phùng Bá Dự</h1>
                 {elements}
             </div>
