@@ -44,7 +44,7 @@ class Baitap extends React.Component {
             return "Input không hợp lệ (Input là number)";
         }
     }
-    
+
     bai10(input) {
         //console.log(input);
         if (input.length <= 0) {
@@ -119,28 +119,29 @@ class Baitap extends React.Component {
         ];
 
         console.log(this.props.isShow);
-        let elements = null;
-        elements = baitap.map((baitap, index) => {
+        let elements = baitap.map((baitap, index) => {
             if (this.props.isShow) {
                 if (index % 2 === 0) {
-                    return <Item  key={index} 
-                                title={baitap.title} 
-                                subtitle={baitap.subtitle}
-                                td1={baitap.td1}
-                                td2={baitap.td2}
-                                td3={baitap.td3}
-                                td4={baitap.td4}
-                                click={baitap.click} />
+                    return <Item key={index} 
+                            title={baitap.title} 
+                            subtitle={baitap.subtitle}
+                            td1={baitap.td1}
+                            td2={baitap.td2}
+                            td3={baitap.td3}
+                            td4={baitap.td4}
+                            click={baitap.click} />
+                } else {
+                    return "";
                 }
             } else {
-                return <Item  key={index} 
-                                title={baitap.title} 
-                                subtitle={baitap.subtitle}
-                                td1={baitap.td1}
-                                td2={baitap.td2}
-                                td3={baitap.td3}
-                                td4={baitap.td4}
-                                click={baitap.click} />
+                return <Item key={index} 
+                            title={baitap.title} 
+                            subtitle={baitap.subtitle}
+                            td1={baitap.td1}
+                            td2={baitap.td2}
+                            td3={baitap.td3}
+                            td4={baitap.td4}
+                            click={baitap.click} />
             }
         });
 

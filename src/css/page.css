@@ -69,6 +69,13 @@ ul li a:hover {}
     display: inline;
     font-size: 28px;
     border: none;
+    color: #ca1919;
+    text-shadow: 1px 1px #ccc;
+}
+
+.toggle .toggle-title h1:hover,
+.ul-guest h1:hover {
+    cursor: pointer;
     color: red;
 }
 
@@ -80,8 +87,9 @@ ul li a:hover {}
 
 .ul-guest h1 {
     display: inline;
-    color: red;
+    color: #ca1919;
     border: none;
+    text-shadow: 2px 3px #ccc;
 }
 
 .isActive {
@@ -104,6 +112,7 @@ ul li a:hover {}
         display: block;
         text-align: center;
         border-bottom: 1px solid green;
+        border-radius: 10px;
     }
 
     ul li:hover {

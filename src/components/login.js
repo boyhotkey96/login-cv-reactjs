@@ -2,9 +2,7 @@ import React from 'react';
 import '../css/login.css';
 import avatar from '../images/avt.JPG';
 import Cv from './cv.js';
-import Pages from './pages.js';
 import axios from 'axios';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 class Login extends React.Component {
     constructor() {

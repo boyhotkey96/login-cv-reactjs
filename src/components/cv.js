@@ -103,7 +103,7 @@ class Cv extends React.Component {
                             <progress value={60} max={100} />
                           </div>
                           <div className="skills">
-                            <p>Javascript <a onClick={this.link}>Link</a></p>
+                            <p>Javascript <a onClick={this.link} href>Link</a></p>
                             <progress value={40} max={100} />
                           </div>
                           <div className="skills">
@@ -329,7 +329,7 @@ class Cv extends React.Component {
                             <progress value={60} max={100} />
                           </div>
                           <div className="skills">
-                            <p>Javascript <a onClick={this.link}>Link</a></p>
+                            <p>Javascript <a onClick={this.link} href>Link</a></p>
                             <progress value={40} max={100} />
                           </div>
                           <div className="skills">
